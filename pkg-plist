@@ -1,0 +1,328 @@
+bin/mikutter
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/addon.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/bugreport.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/change_account.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/contextmenu.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/extract.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/followingcontrol.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/friend_timeline.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/list.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/mentions.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/notify.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/openimg.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/profile.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/search.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/set_input.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/set_view.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/settings.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/shortcutkey.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/smartthread.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/streaming.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/worldcup.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/autotag.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/chi.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/config.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/configloader.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/delayer.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/environment.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/image.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/initialize.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/Array.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/FalseClass.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/Hash.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/Key.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/NilClass.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/Numeric.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/String.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/TrueClass.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/add/core.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/add/rails.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/common.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/editor.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/ext.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/json.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/json/pure.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/pure/generator.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/pure/parser.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/json/version.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/escape.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/lazy.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/memoize.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/History.txt
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/License.txt
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/Manifest.txt
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/README.rdoc
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/Rakefile
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/TODO
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/bin/oauth
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/examples/yql.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/cli.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/client.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/client/action_controller_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/client/helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/client/net_http.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/consumer.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/errors.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/errors/error.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/errors/problem.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/errors/unauthorized.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/oauth.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/oauth_test_helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy/action_controller_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy/base.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy/jabber_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy/mock_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy/net_http.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy/rack_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/server.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/base.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/hmac/base.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/hmac/md5.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/hmac/rmd160.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/hmac/sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/hmac/sha2.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/md5.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/plaintext.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/rsa/sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/tokens/access_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/tokens/consumer_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/tokens/request_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/tokens/server_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/tokens/token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/version.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/oauth.gemspec
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/script/destroy
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/script/generate
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/script/txt2html
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/setup.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/tasks/deployment.rake
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/tasks/environment.rake
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/tasks/website.rake
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases/oauth_case.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases/spec/1_0-final/test_construct_request_url.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases/spec/1_0-final/test_normalize_request_parameters.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases/spec/1_0-final/test_parameter_encodings.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases/spec/1_0-final/test_signature_base_strings.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/keys/rsa.cert
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/keys/rsa.pem
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_access_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_action_controller_request_proxy.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_consumer.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_hmac_sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_net_http_client.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_net_http_request_proxy.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_oauth_helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_rack_request_proxy.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_request_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_rsa_sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_server.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_signature.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_signature_base.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_signature_plain_text.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/test_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website/index.html
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website/index.txt
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website/javascripts/rounded_corners_lite.inc.js
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website/stylesheets/screen.css
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website/template.rhtml
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/cli.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/client.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/client/action_controller_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/client/helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/client/net_http.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/consumer.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/errors.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/errors/error.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/errors/problem.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/errors/unauthorized.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/oauth.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/oauth_test_helper.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy/action_controller_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy/base.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy/jabber_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy/mock_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy/net_http.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy/rack_request.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/server.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/base.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/hmac/base.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/hmac/md5.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/hmac/rmd160.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/hmac/sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/hmac/sha2.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/md5.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/plaintext.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/rsa/sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/sha1.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/tokens/access_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/tokens/consumer_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/tokens/request_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/tokens/server_token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/tokens/token.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/version.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/piapro.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/weakstorage.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/message.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/messageconverters.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/array.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/atom.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/cons.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/error.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/hash.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/init.miku
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/list.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/macro.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/miku.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/nil.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/node.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/parser.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/primitive.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/symbol.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/symboltable.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/miku/yamlisp.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_contextmenu.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_crud.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_extension.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_icon_over_button.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_intelligent_textview.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_keyconfig.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_listlist.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_message_picker.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_mtk.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_mumble.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_mumble_select.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_mumble_vote.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_postbox.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_prioritybox.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_selectbox.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_skin.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_timeline.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_userlist.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_webicon.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/plugin/ChangeLog
+%%RUBY_SITELIBDIR%%/mikutter/core/plugin/gui.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/plugin/plugin.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/plugin/template
+%%RUBY_SITELIBDIR%%/mikutter/core/post.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/retriever.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/serialthread.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/close.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/etc.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/fav.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/followers.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/followings.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/icon.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/list.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/loading.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/notfound.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/overbutton.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/overbutton_mouseover.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/post.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/reply.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/retweet.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/savedsearch.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/search.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/settings.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/favo-old1.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/favo.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/favo2-old1.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/favo2.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/message-received-se.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/message-received.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/mikutter-se.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/mikutter.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/mikuxtu-se.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/mikuxtu.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/retweeted.wav
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/favo.vsq
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/favo2.vsq
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/message-received.vsq
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/mikutter.vsq
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/mikuxtu.vsq
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted.aup
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted.vsq
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e0000496.au
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e00008c6.au
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/tab-bg.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/timeline.png
+%%RUBY_SITELIBDIR%%/mikutter/core/skin/data/unfav.png
+%%RUBY_SITELIBDIR%%/mikutter/core/test/test_message.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/test/test_messageconverters.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/test/test_plugin.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/test/test_retriever.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/test/test_user.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/test/test_utils.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/twitter.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/twitter_api.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/user.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/userconfig.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/userlist.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/utils.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/watch.rb
+%%RUBY_SITELIBDIR%%/mikutter/plugin/WHATSTHIS
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/plugin
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/test
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data/e00
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/plugin
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/mui
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/miku
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/tokens
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/rsa
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature/hmac
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/signature
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/request_proxy
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/errors
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth/client
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website/stylesheets
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website/javascripts
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/website
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/keys
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases/spec/1_0-final
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases/spec
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test/cases
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/test
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/tasks
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/script
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/tokens
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/rsa
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature/hmac
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/signature
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/request_proxy
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/errors
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth/client
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib/oauth
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/lib
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/examples
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6/bin
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth-0.3.6
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/oauth
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/json/pure
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/json/ext
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/json/add
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/json
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core
+@dirrm %%RUBY_SITELIBDIR%%/mikutter
