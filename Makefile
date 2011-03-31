@@ -15,7 +15,10 @@ MAINTAINER=	tota@FreeBSD.org
 COMMENT=	The moest twitter client
 
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
-		${RUBY_PKGNAMEPREFIX}hmac>=0.3.2:${PORTSDIR}/security/ruby-hmac
+		${RUBY_PKGNAMEPREFIX}hmac>=0.3.2:${PORTSDIR}/security/ruby-hmac \
+		rubygem-json_pure>=0:${PORTSDIR}/devel/rubygem-json_pure \
+		${RUBY_SITELIBDIR}/escape.rb:${PORTSDIR}/textproc/ruby-escape \
+		rubygem-oauth>=0:${PORTSDIR}/net/rubygem-oauth
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
@@ -50,6 +53,9 @@ RUN_DEPENDS+=	rubygem-httpclient>=0:${PORTSDIR}/www/rubygem-httpclient
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|' \
 		${WRKSRC}/mikutter.rb
+	@${RM} -rf ${WRKSRC}/core/json*
+	@${RM} -rf ${WRKSRC}/core/lib/escape.rb
+	@${RM} -rf ${WRKSRC}/core/lib/oauth*
 
 do-install:
 	@${INSTALL_SCRIPT} ${INSTALL_WRKSRC}/mikutter.rb ${PREFIX}/bin/mikutter
