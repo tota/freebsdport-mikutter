@@ -131,6 +131,7 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/utils.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/watch.rb
 %%RUBY_SITELIBDIR%%/mikutter/plugin/WHATSTHIS
+@exec mkdir -p  %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/plugin
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/test
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00

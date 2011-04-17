@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.2.12
+PORTVERSION=	0.0.2.13
 CATEGORIES=	net ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -59,7 +59,7 @@ post-patch:
 
 do-install:
 	@${INSTALL_SCRIPT} ${INSTALL_WRKSRC}/mikutter.rb ${PREFIX}/bin/mikutter
-	@cd ${WRKSRC} \
+	@cd ${INSTALL_WRKSRC} \
 		&& ${COPYTREE_SHARE} core ${RUBY_SITELIBDIR}/mikutter \
 		&& ${COPYTREE_SHARE} plugin ${RUBY_SITELIBDIR}/mikutter
 .if !defined(NOPORTDOCS)
