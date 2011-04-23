@@ -1,6 +1,6 @@
 bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/addon.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly/bitly.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/bugreport.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/change_account.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/contextmenu.rb
@@ -18,7 +18,12 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/settings.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/shortcutkey.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/smartthread.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/datasource.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/favoritedatasource.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/messagedatasource.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/sqlite.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/userdatasource.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/userlistdatasource.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/streaming.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/worldcup.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/autotag.rb
@@ -29,6 +34,25 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/environment.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/image.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/initialize.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/Array.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/FalseClass.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/Hash.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/Key.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/NilClass.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/Numeric.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/String.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/TrueClass.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/add/core.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/add/rails.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/common.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/editor.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/json.xpm
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/pure.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/pure/generator.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/pure/parser.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/version.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/lazy.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/memoize.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/piapro.rb
@@ -132,6 +156,7 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/watch.rb
 %%RUBY_SITELIBDIR%%/mikutter/plugin/WHATSTHIS
 @exec mkdir -p  %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
+@exec mkdir -p  %D/%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/plugin
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/test
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00
@@ -144,8 +169,14 @@ bin/mikutter
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/plugin
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/mui
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/miku
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/pure
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/add
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core
 @dirrm %%RUBY_SITELIBDIR%%/mikutter
