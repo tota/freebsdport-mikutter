@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.1
+PORTVERSION=	0.0.3.2
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
 		${RUBY_PKGNAMEPREFIX}hmac>=0.3.2:${PORTSDIR}/security/ruby-hmac \
 		rubygem-json_pure>=0:${PORTSDIR}/devel/rubygem-json_pure \
 		${RUBY_SITELIBDIR}/escape.rb:${PORTSDIR}/textproc/ruby-escape \
+		${RUBY_SITELIBDIR}/memoize.rb:${PORTSDIR}/devel/ruby-memoize \
 		rubygem-oauth>=0:${PORTSDIR}/net/rubygem-oauth
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
@@ -28,7 +29,8 @@ LICENSE_FILE=   ${WRKSRC}/LICENSE
 USE_RUBY=	yes
 NO_BUILD=	yes
 
-RUBY_SHEBANG_FILES=	mikutter.rb
+RUBY_SHEBANG_FILES=	mikutter.rb \
+			core/lib/piapro.rb
 
 PORTDOCS=	README
 
@@ -55,6 +57,7 @@ post-patch:
 		${WRKSRC}/mikutter.rb
 	@${RM} -rf ${WRKSRC}/core/json*
 	@${RM} -rf ${WRKSRC}/core/lib/escape.rb
+	@${RM} -rf ${WRKSRC}/core/lib/memoize.rb
 	@${RM} -rf ${WRKSRC}/core/lib/oauth*
 
 do-install:

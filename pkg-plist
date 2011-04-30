@@ -18,12 +18,6 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/settings.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/shortcutkey.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/smartthread.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/datasource.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/favoritedatasource.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/messagedatasource.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/sqlite.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/userdatasource.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite/userlistdatasource.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/streaming.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/worldcup.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/autotag.rb
@@ -54,7 +48,6 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/pure/parser.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/version.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/lazy.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/lib/memoize.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/piapro.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/weakstorage.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/message.rb
@@ -175,7 +168,6 @@ bin/mikutter
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
-@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/sqlite
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core
