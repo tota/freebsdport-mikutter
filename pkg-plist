@@ -12,6 +12,7 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/notify.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/openimg.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/profile.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/proxy/proxy.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/search.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/set_input.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/set_view.rb
@@ -49,6 +50,9 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/version.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/lazy.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/piapro.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/timelimitedqueue.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/timelimitedqueue/test/test_timelimitedqueue.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/lib/timelimitedqueue/timelimitedqueue.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/lib/weakstorage.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/message.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/messageconverters.rb
@@ -148,8 +152,9 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/utils.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/watch.rb
 %%RUBY_SITELIBDIR%%/mikutter/plugin/WHATSTHIS
-@exec mkdir -p  %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
-@exec mkdir -p  %D/%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext
+share/applications/mikutter.desktop
+@exec mkdir -p %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
+@exec mkdir -p %D/%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/plugin
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/test
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00
@@ -162,12 +167,15 @@ bin/mikutter
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/plugin
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/mui
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/miku
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/timelimitedqueue/test
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/timelimitedqueue
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/pure
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json/add
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/json
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/proxy
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core

@@ -6,13 +6,13 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.2
+PORTVERSION=	0.0.3.3
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
-COMMENT=	The moest twitter client
+COMMENT=	A simple, powerful and moeful twitter client
 
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
 		${RUBY_PKGNAMEPREFIX}hmac>=0.3.2:${PORTSDIR}/security/ruby-hmac \
@@ -32,11 +32,14 @@ NO_BUILD=	yes
 RUBY_SHEBANG_FILES=	mikutter.rb \
 			core/lib/piapro.rb
 
+SUB_FILES=	mikutter.desktop
+SUB_LIST=	RUBY_SITELIBDIR=${RUBY_SITELIBDIR}
+
 PORTDOCS=	README
 
 OPTIONS=	NOTIFY "notify-send support" on \
-		SQLITE "SQLITE support" on \
 		HTTPCLIENT "httpclient support" on
+#		SDL "SDL support" off
 
 .include <bsd.port.pre.mk>
 
@@ -44,13 +47,13 @@ OPTIONS=	NOTIFY "notify-send support" on \
 RUN_DEPENDS+=	notify-send:${PORTSDIR}/devel/libnotify
 .endif
 
-.if defined(WITH_SQLITE)
-RUN_DEPENDS+=	rubygem-sqlite3>=0:${PORTSDIR}/databases/rubygem-sqlite3
-.endif
-
 .if defined(WITH_HTTPCLIENT)
 RUN_DEPENDS+=	rubygem-httpclient>=0:${PORTSDIR}/www/rubygem-httpclient
 .endif
+
+#.if defined(WITH_SDL)
+#RUN_DEPENDS+=	rubygem-sdl>=0:${PORTSDIR}/devel/rubygem-sdl
+#.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|' \
@@ -65,6 +68,7 @@ do-install:
 	@cd ${INSTALL_WRKSRC} \
 		&& ${COPYTREE_SHARE} core ${RUBY_SITELIBDIR}/mikutter \
 		&& ${COPYTREE_SHARE} plugin ${RUBY_SITELIBDIR}/mikutter
+	@${INSTALL_DATA} ${WRKDIR}/${SUB_FILES} ${PREFIX}/share/applications/
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
@@ -73,6 +77,9 @@ do-install:
 x-generate-plist:
 	${ECHO} bin/mikutter > pkg-plist.new
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type f | ${SORT} | ${SED} -e 's,${RUBY_SITELIBDIR},%%RUBY_SITELIBDIR%%,' >> pkg-plist.new
+	${ECHO} share/applications/mikutter.desktop >> pkg-plist.new
+	${ECHO} @exec ${MKDIR:S|/bin/||} %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp >> pkg-plist.new
+	${ECHO} @exec ${MKDIR:S|/bin/||} %D/%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext >> pkg-plist.new
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type d -depth | ${SORT} -r | ${SED} -e 's,${RUBY_SITELIBDIR},@dirrm %%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 
 .include <bsd.port.post.mk>
