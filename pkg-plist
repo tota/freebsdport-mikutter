@@ -72,6 +72,11 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/miku/symbol.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/miku/symboltable.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/miku/yamlisp.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/cairo_cell_renderer_message.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/cairo_coordinate_module.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/cairo_miracle_painter.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/cairo_pseudo_message_widget.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/cairo_timeline.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_contextmenu.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_crud.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_extension.rb
@@ -89,6 +94,7 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_selectbox.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_skin.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_timeline.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_timeline_utils.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_userlist.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/mui/gtk_webicon.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/plugin/ChangeLog
