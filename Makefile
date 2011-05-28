@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.4
+PORTVERSION=	0.0.3.5
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
