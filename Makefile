@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.5
+PORTVERSION=	0.0.3.6
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -15,7 +15,7 @@ MAINTAINER=	tota@FreeBSD.org
 COMMENT=	A simple, powerful and moeful twitter client
 
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
-		${RUBY_PKGNAMEPREFIX}hmac>=0.3.2:${PORTSDIR}/security/ruby-hmac \
+		${RUBY_PKGNAMEPREFIX}hmac>=0.4.0:${PORTSDIR}/security/ruby-hmac \
 		rubygem-json_pure>=0:${PORTSDIR}/devel/rubygem-json_pure \
 		${RUBY_SITELIBDIR}/escape.rb:${PORTSDIR}/textproc/ruby-escape \
 		${RUBY_SITELIBDIR}/memoize.rb:${PORTSDIR}/devel/ruby-memoize \
@@ -58,7 +58,8 @@ RUN_DEPENDS+=	rubygem-httpclient>=0:${PORTSDIR}/www/rubygem-httpclient
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|' \
 		${WRKSRC}/mikutter.rb
-	@${RM} -rf ${WRKSRC}/core/json*
+	@${RM} -rf ${WRKSRC}/core/lib/hmac*
+	@${RM} -rf ${WRKSRC}/core/lib/json*
 	@${RM} -rf ${WRKSRC}/core/lib/escape.rb
 	@${RM} -rf ${WRKSRC}/core/lib/memoize.rb
 	@${RM} -rf ${WRKSRC}/core/lib/oauth*
@@ -79,7 +80,6 @@ x-generate-plist:
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type f | ${SORT} | ${SED} -e 's,${RUBY_SITELIBDIR},%%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 	${ECHO} share/applications/mikutter.desktop >> pkg-plist.new
 	${ECHO} @exec ${MKDIR:S|/bin/||} %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp >> pkg-plist.new
-	${ECHO} @exec ${MKDIR:S|/bin/||} %D/%%RUBY_SITELIBDIR%%/mikutter/core/lib/json/ext >> pkg-plist.new
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type d -depth | ${SORT} -r | ${SED} -e 's,${RUBY_SITELIBDIR},@dirrm %%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 
 .include <bsd.port.post.mk>
