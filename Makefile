@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.6
+PORTVERSION=	0.0.3.7
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -17,7 +17,6 @@ COMMENT=	A simple, powerful and moeful twitter client
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
 		${RUBY_PKGNAMEPREFIX}hmac>=0.4.0:${PORTSDIR}/security/ruby-hmac \
 		rubygem-json_pure>=0:${PORTSDIR}/devel/rubygem-json_pure \
-		${RUBY_SITELIBDIR}/escape.rb:${PORTSDIR}/textproc/ruby-escape \
 		${RUBY_SITELIBDIR}/memoize.rb:${PORTSDIR}/devel/ruby-memoize \
 		rubygem-oauth>=0:${PORTSDIR}/net/rubygem-oauth
 
@@ -60,7 +59,6 @@ post-patch:
 		${WRKSRC}/mikutter.rb
 	@${RM} -rf ${WRKSRC}/core/lib/hmac*
 	@${RM} -rf ${WRKSRC}/core/lib/json*
-	@${RM} -rf ${WRKSRC}/core/lib/escape.rb
 	@${RM} -rf ${WRKSRC}/core/lib/memoize.rb
 	@${RM} -rf ${WRKSRC}/core/lib/oauth*
 
