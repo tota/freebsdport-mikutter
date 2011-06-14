@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.7
+PORTVERSION=	0.0.3.8
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -18,7 +18,8 @@ RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
 		${RUBY_PKGNAMEPREFIX}hmac>=0.4.0:${PORTSDIR}/security/ruby-hmac \
 		rubygem-json_pure>=0:${PORTSDIR}/devel/rubygem-json_pure \
 		${RUBY_SITELIBDIR}/memoize.rb:${PORTSDIR}/devel/ruby-memoize \
-		rubygem-oauth>=0:${PORTSDIR}/net/rubygem-oauth
+		rubygem-oauth>=0:${PORTSDIR}/net/rubygem-oauth \
+		${RUBY_SITELIBDIR}/bsearch.rb:${PORTSDIR}/devel/ruby-bsearch
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
@@ -57,10 +58,13 @@ RUN_DEPENDS+=	rubygem-httpclient>=0:${PORTSDIR}/www/rubygem-httpclient
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|' \
 		${WRKSRC}/mikutter.rb
+	@${REINPLACE_CMD} -i '' -e "s|miquire :lib, 'ruby-bsearch-1.5/bsearch'|require 'bsearch'|" \
+		${WRKSRC}/core/mui/cairo_inner_tl.rb
 	@${RM} -rf ${WRKSRC}/core/lib/hmac*
 	@${RM} -rf ${WRKSRC}/core/lib/json*
 	@${RM} -rf ${WRKSRC}/core/lib/memoize.rb
 	@${RM} -rf ${WRKSRC}/core/lib/oauth*
+	@${RM} -rf ${WRKSRC}/core/lib/ruby-bsearch-1.5
 
 do-install:
 	@${INSTALL_SCRIPT} ${INSTALL_WRKSRC}/mikutter.rb ${PREFIX}/bin/mikutter

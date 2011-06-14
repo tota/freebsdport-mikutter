@@ -1,5 +1,6 @@
 bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/addon.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/alsa/alsa.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly/bitly.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly/test.bitly.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/bugreport.rb
@@ -8,6 +9,7 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/extract.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/followingcontrol.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/friend_timeline.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/addon/libnotify/libnotify.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/list.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/mentions.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/notify.rb
@@ -133,6 +135,7 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/timeline.png
 %%RUBY_SITELIBDIR%%/mikutter/core/skin/data/unfav.png
 %%RUBY_SITELIBDIR%%/mikutter/core/test/test_cairo_textselector.rb
+%%RUBY_SITELIBDIR%%/mikutter/core/test/test_entity.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/test/test_message.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/test/test_messageconverters.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/test/test_plugin.rb
@@ -166,7 +169,9 @@ share/applications/mikutter.desktop
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/proxy
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/libnotify
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly
+@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/alsa
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core
 @dirrm %%RUBY_SITELIBDIR%%/mikutter
