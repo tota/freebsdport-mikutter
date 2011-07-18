@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.11
+PORTVERSION=	0.0.3.12
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -14,7 +14,11 @@ DISTNAME=	${PORTNAME}.${PORTVERSION}
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	A simple, powerful and moeful twitter client
 
-RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
+LICENSE=        GPLv3
+LICENSE_FILE=   ${WRKSRC}/LICENSE
+
+RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2 \
+		${RUBY_SITEARCHLIBDIR}/cairo.so:${PORTSDIR}/graphics/ruby-cairo \
 		${RUBY_PKGNAMEPREFIX}hmac>=0.4.0:${PORTSDIR}/security/ruby-hmac \
 		rubygem-json_pure>=0:${PORTSDIR}/devel/rubygem-json_pure \
 		${RUBY_SITELIBDIR}/memoize.rb:${PORTSDIR}/devel/ruby-memoize \
@@ -22,9 +26,6 @@ RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gnome2.so:${PORTSDIR}/x11/ruby-gnome2 \
 		${RUBY_SITELIBDIR}/bsearch.rb:${PORTSDIR}/devel/ruby-bsearch
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
-
-LICENSE=        GPLv3
-LICENSE_FILE=   ${WRKSRC}/LICENSE
 
 USE_RUBY=	yes
 NO_BUILD=	yes
