@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.13
+PORTVERSION=	0.0.3.14
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -31,7 +31,11 @@ USE_RUBY=	yes
 NO_BUILD=	yes
 
 RUBY_SHEBANG_FILES=	mikutter.rb \
-			core/lib/piapro.rb
+			core/autotag.rb \
+			core/chi.rb \
+			core/initialize.rb \
+			core/lib/piapro.rb \
+			core/miku/miku.rb
 
 SUB_FILES=	mikutter.desktop
 SUB_LIST=	RUBY_SITELIBDIR=${RUBY_SITELIBDIR}
@@ -40,7 +44,6 @@ PORTDOCS=	README
 
 OPTIONS=	NOTIFY "notify-send support" on \
 		HTTPCLIENT "httpclient support" on
-#		SDL "SDL support" off
 
 .include <bsd.port.pre.mk>
 
@@ -51,10 +54,6 @@ RUN_DEPENDS+=	notify-send:${PORTSDIR}/devel/libnotify
 .if defined(WITH_HTTPCLIENT)
 RUN_DEPENDS+=	rubygem-httpclient>=0:${PORTSDIR}/www/rubygem-httpclient
 .endif
-
-#.if defined(WITH_SDL)
-#RUN_DEPENDS+=	rubygem-sdl>=0:${PORTSDIR}/devel/rubygem-sdl
-#.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|' \

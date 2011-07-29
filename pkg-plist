@@ -23,7 +23,6 @@ bin/mikutter
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/shortcutkey.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/smartthread.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/addon/streaming.rb
-%%RUBY_SITELIBDIR%%/mikutter/core/addon/worldcup.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/autotag.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/chi.rb
 %%RUBY_SITELIBDIR%%/mikutter/core/config.rb
@@ -167,7 +166,6 @@ share/applications/mikutter.desktop
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/timelimitedqueue/test
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib/timelimitedqueue
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/lib
-@dirrm %%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/proxy
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/libnotify
 @dirrm %%RUBY_SITELIBDIR%%/mikutter/core/addon/bitly
