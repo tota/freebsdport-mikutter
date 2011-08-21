@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.460
+PORTVERSION=	0.0.3.472
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -71,6 +71,7 @@ do-install:
 	@cd ${INSTALL_WRKSRC} \
 		&& ${COPYTREE_SHARE} core ${RUBY_SITELIBDIR}/mikutter \
 		&& ${COPYTREE_SHARE} plugin ${RUBY_SITELIBDIR}/mikutter
+	@${MKDIR} ${PREFIX}/share/applications
 	@${INSTALL_DATA} ${WRKDIR}/${SUB_FILES} ${PREFIX}/share/applications/
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
@@ -81,6 +82,7 @@ x-generate-plist:
 	${ECHO} bin/mikutter > pkg-plist.new
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type f | ${SORT} | ${SED} -e 's,${RUBY_SITELIBDIR},%%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 	${ECHO} share/applications/mikutter.desktop >> pkg-plist.new
+	${ECHO} '@dirrmtry share/applications' >> pkg-plist.new
 	${ECHO} @exec ${MKDIR:S|/bin/||} %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp >> pkg-plist.new
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type d -depth | ${SORT} -r | ${SED} -e 's,${RUBY_SITELIBDIR},@dirrm %%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 
