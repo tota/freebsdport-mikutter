@@ -8,7 +8,9 @@
 PORTNAME=	mikutter
 PORTVERSION=	0.0.3.514
 CATEGORIES=	net-im ruby
-MASTER_SITES=	http://mikutter.hachune.net/bin/
+MASTER_SITES=	http://mikutter.hachune.net/bin/ \
+		LOCAL
+MASTER_SITE_SUBDIR=	tota/${PORTNAME}
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
@@ -41,6 +43,7 @@ SUB_FILES=	mikutter.desktop
 SUB_LIST=	RUBY_SITELIBDIR=${RUBY_SITELIBDIR}
 
 PORTDOCS=	README
+PORTSCOUT=	limit:^0\.0\.3\.[0-9]*
 
 OPTIONS=	NOTIFY "notify-send support" on \
 		HTTPCLIENT "httpclient support" on
