@@ -2,7 +2,7 @@
 # Date created:		2011-03-27
 # Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/net-im/mikutter/Makefile,v 1.1 2011/09/27 11:11:00 tota Exp $
 #
 
 PORTNAME=	mikutter
