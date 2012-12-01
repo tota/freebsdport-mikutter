@@ -1,12 +1,8 @@
-# New ports collection makefile for:	mikutter
-# Date created:		2011-03-27
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/mikutter/Makefile,v 1.1 2011/09/27 11:11:00 tota Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/net-im/mikutter/Makefile,v 1.20 2012/11/17 06:00:28 svnexp Exp $
 
 PORTNAME=	mikutter
-PORTVERSION=	0.0.3.514
+PORTVERSION=	0.2.0.1054
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/ \
 		LOCAL
@@ -14,11 +10,12 @@ MASTER_SITE_SUBDIR=	tota/${PORTNAME}
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
-COMMENT=	A simple, powerful and moeful twitter client
+COMMENT=	Simple, powerful, and moeful Twitter client
 
-LICENSE=        GPLv3
-LICENSE_FILE=   ${WRKSRC}/LICENSE
+LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
+INSTALL_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2 \
 		${RUBY_SITEARCHLIBDIR}/cairo.so:${PORTSDIR}/graphics/ruby-cairo \
 		${RUBY_PKGNAMEPREFIX}hmac>=0.4.0:${PORTSDIR}/security/ruby-hmac \
@@ -30,7 +27,10 @@ RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2 \
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
 USE_RUBY=	yes
+RUBY_VER=	1.9
 NO_BUILD=	yes
+
+CONFLICTS=	mikutter-0.0.3.*
 
 RUBY_SHEBANG_FILES=	mikutter.rb \
 			core/autotag.rb \
@@ -43,23 +43,29 @@ SUB_FILES=	mikutter.desktop
 SUB_LIST=	RUBY_SITELIBDIR=${RUBY_SITELIBDIR}
 
 PORTDOCS=	README
-PORTSCOUT=	limit:^0\.0\.3\.[0-9]*
 
-OPTIONS=	NOTIFY "notify-send support" on \
-		HTTPCLIENT "httpclient support" on
+OPTIONS_DEFINE=		HTTPCLIENT NOTIFY
+HTTPCLIENT_DESC=	httpclient support
+NOTIFY_DESC=		notify-send support
+
+OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_NOTIFY)
-RUN_DEPENDS+=	notify-send:${PORTSDIR}/devel/libnotify
+.if ${RUBY_DEFAULT_VER} != ${RUBY_VER}
+IGNORE=	requires RUBY_DEFAULT_VER=${RUBY_VER}
 .endif
 
-.if defined(WITH_HTTPCLIENT)
+.if ${PORT_OPTIONS:MHTTPCLIENT}
 RUN_DEPENDS+=	rubygem-httpclient>=0:${PORTSDIR}/www/rubygem-httpclient
 .endif
 
+.if ${PORT_OPTIONS:MNOTIFY}
+RUN_DEPENDS+=	notify-send:${PORTSDIR}/devel/libnotify
+.endif
+
 post-patch:
-	@${REINPLACE_CMD} -e "48s|chdir\(.*\)|chdir\('${RUBY_SITELIBDIR}/mikutter/core'\)|" \
+	@${REINPLACE_CMD} -e "s|chdir\(.*\)|chdir\('${RUBY_SITELIBDIR}/mikutter/core'\)|" \
 		${WRKSRC}/mikutter.rb
 	@${REINPLACE_CMD} -i '' -e "s|miquire :lib, 'ruby-bsearch-1.5/bsearch'|require 'bsearch'|" \
 		${WRKSRC}/core/mui/cairo_inner_tl.rb
@@ -86,7 +92,6 @@ x-generate-plist:
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type f | ${SORT} | ${SED} -e 's,${RUBY_SITELIBDIR},%%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 	${ECHO} share/applications/mikutter.desktop >> pkg-plist.new
 	${ECHO} '@dirrmtry share/applications' >> pkg-plist.new
-	${ECHO} @exec ${MKDIR:S|/bin/||} %D/%%RUBY_SITELIBDIR%%/mikutter/core/hatsunelisp >> pkg-plist.new
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type d -depth | ${SORT} -r | ${SED} -e 's,${RUBY_SITELIBDIR},@dirrm %%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 
 .include <bsd.port.post.mk>
