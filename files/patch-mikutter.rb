@@ -9,7 +9,7 @@
 -else
 -  Dir.chdir(File.join(File.dirname($0), 'core'))
 -end
-+Dir.chdir('${RUBY_SITELIBDIR}/mikutter/core')
++Dir.chdir('%%RUBY_SITELIBDIR%%/mikutter/core')
  
  Thread.abort_on_exception = true
  ENV['LIBOVERLAY_SCROLLBAR'] = '0'

@@ -67,6 +67,8 @@ RUN_DEPENDS+=	notify-send:${PORTSDIR}/devel/libnotify
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -i '' -e "s|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|" \
+		${WRKSRC}/mikutter.rb
 	@${REINPLACE_CMD} -i '' -e "s|miquire :lib, 'ruby-bsearch-1.5/bsearch'|require 'bsearch'|" \
 		${WRKSRC}/core/mui/cairo_inner_tl.rb
 	@${RM} -rf ${WRKSRC}/core/lib/hmac*
