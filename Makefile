@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/net-im/mikutter/Makefile,v 1.20 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: ports/net-im/mikutter/Makefile,v 1.21 2012/12/02 02:55:38 svnexp Exp $
 
 PORTNAME=	mikutter
-PORTVERSION=	0.2.0.1064
+PORTVERSION=	0.2.0.1080
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/ \
 		LOCAL
